@@ -19,6 +19,11 @@ class App extends Component {
         <audio>{this.state.audio}</audio>
       </div>
     )
+
+  nextWord() {
+
+  }
+
   }
 
 }
