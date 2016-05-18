@@ -1,26 +1,5 @@
 import React, { Component } from 'react'
-
-const englishWords = [
-      {
-      word: "Cheese",
-      respell: "cheez",
-      image: "",
-      audio: ""
-      },
-      {
-      word: "Bread",
-      respell: "bred",
-      image: "",
-      audio: ""
-      },
-      {
-      word: "Trousers",
-      respell: "trou-zerz",
-      image: "",
-      audio: ""
-      }
-
-    ]
+import englishWords from './englishWords'
 
 class App extends Component {
 
@@ -32,9 +11,8 @@ class App extends Component {
 
   clickHandler () {
     let randomNumber = Math.floor(Math.random() * (2 - 0 + 1)) + 0
-    this.setState({  word: englishWords[randomNumber].word, respell: englishWords[randomNumber].respell, img: englishWords[randomNumber].img })
+    this.setState({  word: englishWords[randomNumber].word, respell: englishWords[randomNumber].respell, image: englishWords[randomNumber].image })
     console.log("englishWords: ", englishWords[Math.floor(Math.random() * (2 - 0 + 1)) + 0].word)
-    // console.log("this.state: ", this.state)
   }
 
 
@@ -46,9 +24,8 @@ class App extends Component {
         <h3>Say it loud, say it proud:</h3>
         <h2>{this.state.word}</h2>
         <h4>{this.state.respell}</h4>
-        <img src="{this.state.img}" />
+        <img src={this.state.image} onClick={this.clickHandler.bind(this)}/>
         <audio>{this.state.audio}</audio>
-        <button onClick={this.clickHandler.bind(this)} ></button>
       </div>
     )
 
