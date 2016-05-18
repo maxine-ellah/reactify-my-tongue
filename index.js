@@ -5,4 +5,4 @@ import App from './components/app'
 
 
 render(<App userName="Maxine"/>, document.querySelector('main'))
-console.log('welcome to reactify-my-tongue')
+console.log('welcome to reactify my tongue')

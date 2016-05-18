@@ -11,15 +11,19 @@ class App extends Component {
 
   clickHandler () {
     let randomNumber = Math.floor(Math.random() * (2 - 0 + 1)) + 0
-    this.setState({  word: englishWords[randomNumber].word, respell: englishWords[randomNumber].respell, image: englishWords[randomNumber].image })
-    console.log("englishWords: ", englishWords[Math.floor(Math.random() * (2 - 0 + 1)) + 0].word)
+    this.setState({
+      word: englishWords[randomNumber].word,
+      respell: englishWords[randomNumber].respell,
+      image: englishWords[randomNumber].image
+    })
+    console.log("englishWords: ", englishWords[Math.floor(Math.random() * (2 - 0 + 1)) + 0])
   }
 
 
   render () {
     return (
       <div>
-        <h1>Reactify-my-tongue</h1>
+        <h1>Reactify my tongue</h1>
         <h4>{this.props.userName}</h4>
         <h3>Say it loud, say it proud:</h3>
         <h2>{this.state.word}</h2>
