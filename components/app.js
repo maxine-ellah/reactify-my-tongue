@@ -1,17 +1,40 @@
 import React, { Component } from 'react'
 
+const englishWords = [
+      {
+      word: "Cheese",
+      respell: "cheez",
+      image: "",
+      audio: ""
+      },
+      {
+      word: "Bread",
+      respell: "bred",
+      image: "",
+      audio: ""
+      },
+      {
+      word: "Trousers",
+      respell: "trou-zerz",
+      image: "",
+      audio: ""
+      }
+
+    ]
+
 class App extends Component {
 
   constructor (props) {
     super(props)
-    this.state = this.props.words[0]
+    this.state = englishWords[0]
     console.log("this.state in constructor: ", this.state)
   }
 
   clickHandler () {
-    this.setState({ word: this.props.words[Math.floor(Math.random() * (3 - 0 + 1)) + 0] })
-    console.log("inside clickHandler", this.state)
-    console.log(Math.floor(Math.random() * (3 - 0 + 1)) + 0)
+    let randomNumber = Math.floor(Math.random() * (2 - 0 + 1)) + 0
+    this.setState({  word: englishWords[randomNumber].word, respell: englishWords[randomNumber].respell, img: englishWords[randomNumber].img })
+    console.log("englishWords: ", englishWords[Math.floor(Math.random() * (2 - 0 + 1)) + 0].word)
+    // console.log("this.state: ", this.state)
   }
 
 
