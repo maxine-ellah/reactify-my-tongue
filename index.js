@@ -4,17 +4,17 @@ import App from './components/app'
 
 render(<App words={[{
       word: "Cheese",
-      repell: "cheez",
+      respell: "cheez",
       image: "",
       audio: "" },
       {
       word: "Bread",
-      repell: "bred",
+      respell: "bred",
       image: "",
       audio: "" },
       {
       word: "Trousers",
-      repell: "trou-zerz",
+      respell: "trou-zerz",
       image: "",
       audio: "" }
 

@@ -5,20 +5,20 @@ class App extends Component {
   constructor (props) {
     super(props)
     this.state = this.props.words[0]
-    console.log(this.state)
+    console.log("this.state in constructor: ", this.state)
   }
 
   clickHandler () {
-    console.log(this.props.words[1])
-    this.setState({ word: this.props.words[Math.floor(Math.random)] })
+    this.setState({ word: this.props.words[Math.floor(Math.random() * (3 - 0 + 1)) + 0] })
     console.log("inside clickHandler", this.state)
+    console.log(Math.floor(Math.random() * (3 - 0 + 1)) + 0)
   }
 
 
   render () {
     return (
       <div>
-        <h1>Tongue</h1>
+        <h1>Reactify-my-tongue</h1>
         <h4>{this.props.userName}</h4>
         <h3>Say it loud, say it proud:</h3>
         <h2>{this.state.word}</h2>
