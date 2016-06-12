@@ -14,7 +14,8 @@ class App extends Component {
     this.setState({
       word: englishWords[randomNumber].word,
       respell: englishWords[randomNumber].respell,
-      image: englishWords[randomNumber].image
+      image: englishWords[randomNumber].image,
+      audio: englishWords[randomNumber].audio
     })
     console.log("englishWords: ", englishWords[Math.floor(Math.random() * (2 - 0 + 1)) + 0])
   }
@@ -29,7 +30,10 @@ class App extends Component {
         <h2>{this.state.word}</h2>
         <h4>{this.state.respell}</h4>
         <img src={this.state.image} onClick={this.clickHandler.bind(this)}/>
-        <audio>{this.state.audio}</audio>
+        <br/>
+        <audio controls preload autoplay>
+        <source src={this.state.audio} type="audio/mpeg"/>
+        </audio>
       </div>
     )
 
