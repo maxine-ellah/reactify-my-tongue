@@ -1,34 +1,7 @@
-
 # reactify-my-tongue
 
-it's a real sweet app
+Just a small personal project to convert my [Tongue](tongue123.herokuapp.com) app to work with React.
 
-## how
-
-### install
-
-```
-git clone https://github.com/maxine-ellaj/reactify-my-tongue
-cd 
-npm install
-```
-
-## develop
-
-```
-npm start
-```
-
-browse to <http://localhost:9966/>.
-
-## test
-
-```
-npm test
-```
-
-## deploy
-
-```
-npm run deploy
-```
+<p align="center">
+  <img src="./reactify-my-tongue.png" alt="Sublime's custom image"/>
+</p>
